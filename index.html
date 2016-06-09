@@ -8,8 +8,17 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script>
+        var helloApp = angular.module("helloApp", []);
+    	  helloApp.controller("HelloCtrl", function($scope) {
+    		    $scope.name = "Calvin Hobbes";
+    	  });
+    </script>
   </head>
-  <body>
+  <body ng-controller="HelloCtrl">
     <section class="page-header">
       <h1 class="project-name">Angular-page</h1>
       <h2 class="project-tagline">create page angular 1 e publish in git</h2>
@@ -19,6 +28,7 @@
     </section>
 
     <section class="main-content">
+      <h3 ng-model="name"></h3>
       <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
